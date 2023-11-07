@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="top"
+    android:layout_margin="16sp"
+    android:background="@drawable/curve_sharp"
+    android:backgroundTint="#f7f7f7"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/sort_by"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/dialogsort_lastmodified"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:drawablePadding="16sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/last_modified"
+        android:textColor="#474747"
+        android:textSize="16sp"
+        app:drawableEndCompat="@drawable/checkdone_icon"
+        app:drawableStartCompat="@drawable/calendericon" />
+
+    <TextView
+        android:id="@+id/dialogsort_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/name"
+        android:textColor="#474747"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/sortname_icon"
+        />
+
+    <TextView
+        android:id="@+id/dialogsort_filesize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:drawablePadding="18sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/file_size"
+        android:textColor="#474747"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/sortfilesize_icon" />
+
+    <View
+        android:id="@+id/viewline2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16sp"
+        android:layout_marginEnd="8dp"
+        android:background="#80CACACA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwrd_tool_container" />
+
+    <TextView
+        android:id="@+id/dialogsort_newtoold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:drawablePadding="16sp"
+        android:fontFamily="@font/roboto_medium"
+
+        android:text="@string/from_new_to_old"
+        android:textColor="#474747"
+        android:textSize="16sp"
+        app:drawableEndCompat="@drawable/checkdone_icon"
+        app:drawableStartCompat="@drawable/newtoold_icon" />
+
+    <TextView
+        android:id="@+id/dialogsort_oldtonew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:drawablePadding="16sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/from_old_to_new"
+        android:textColor="#474747"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/oldtonew_icon" />
+
+    <TextView
+        android:id="@+id/dialogsort_a_to_z"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:drawablePadding="16sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/a_z"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textColor="#474747"
+        app:drawableEndCompat="@drawable/checkdone_icon"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/a_to_z_ico" />
+
+    <TextView
+        android:id="@+id/dialogsort_z_to_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:drawablePadding="16sp"
+        android:fontFamily="@font/roboto_medium"
+
+        android:text="@string/z_a"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textColor="#474747"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/z_to_a_icon" />
+
+    <TextView
+        android:id="@+id/dialogsort_largetosmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:drawablePadding="16sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/from_large_to_small"
+        android:textColor="#474747"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textSize="16sp"
+        app:drawableEndCompat="@drawable/checkdone_icon"
+        app:drawableStartCompat="@drawable/largetosmall_icon" />
+
+    <TextView
+        android:id="@+id/dialogsort_smalltolarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:drawablePadding="16sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/from_small_to_large"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textColor="#474747"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/smalltolarge_icon" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialogsort_btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginVertical="20sp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/cancel"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/page_number_card" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialogsort_btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginVertical="20sp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/ok"
+            android:textColor="@color/appcolor_red"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/page_number_card" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

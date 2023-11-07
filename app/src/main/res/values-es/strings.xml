@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    <string name="privacy_policy_link" translatable="false">https://sites.google.com</string>-->
+<!--    <string name="my_gmail" translatable="false">bilal@gmail.com</string>-->
+<!--    <string name="billing_id" translatable="false">abcedefghijklmnopqrstuvwxyz</string>-->
+
+    <string name="app_name">Lector PDF</string>
+    <string name="permission_needed">Permiso necesario</string>
+    <string name="cancel">Cancelar</string>
+    <string name="allow">Permitir</string>
+    <string name="permission_message">Se requiere permiso de escritura para obtener archivos. Permítalo para que pueda usar esta aplicación correctamente.</string>
+    <string name="permission_title">Para administrar archivos, permita que <b> PDF Reader </b> permita archivos en su dispositivo.</string>
+    <string name="language_options">Opciones de lenguaje</string>
+    <string name="system_default">Sistema por defecto</string>
+    <string name="all_languages">Todos los idiomas</string>
+    <string name="handy_pdf_viewer">Práctico visor de PDF</string>
+    <string name="reader">Lector</string>
+    <string name="pdf">PDF</string>
+    <string name="premium">De primera calidad</string>
+    <string name="convert">Convertir</string>
+    <string name="zeroselected">0 Seleccionado</string>
+    <string name="selected">Seleccionado</string>
+    <string name="subscribe_to_premium">Suscríbete a Premium</string>
+    <string name="premium_subtitle">Obtenga acceso a nuestros anuncios gratis. Experimente la lectura perfecta de PDF.</string>
+    <string name="remove_nads">Quitar\nAnuncios</string>
+    <string name="better_nperformance">Mejor\nrendimiento</string>
+    <string name="pdf_editor_naccess">Editor de PDF\nAcceder</string>
+    <string name="get_50_discount">Obtenga 50% de descuento</string>
+    <string name="unlock_pro">Desbloquear Pro</string>
+    <string name="terms_t_t_t_tprivacy">Términos\t\t|\t\tPrivacidad</string>
+    <string name="permission_deny_message">¡Permiso denegado! Por favor permite</string>
+    <string name="rootdir">Directorio raíz</string>
+    <string name="pdf_reader">Lector PDF</string>
+    <string name="home">Hogar</string>
+    <string name="recent">Reciente</string>
+    <string name="favourite">Favoritos</string>
+    <string name="tools">Herramientas</string>
+    <string name="delete">Borrar</string>
+    <string name="share">Compartir</string>
+    <string name="reent_files">Archivos recientes</string>
+    <string name="removefav">Eliminar favorito</string>
+    <string name="choose_images">Elija Imágenes</string>
+    <string name="processing">Procesando..</string>
+    <string name="browse_pdf">Explorar PDF</string>
+    <string name="dark_mood">Estado de ánimo oscuro</string>
+    <string name="go_premium">Hazte Premium</string>
+    <string name="share_app">Compartir aplicación</string>
+    <string name="privacy_policy">política de privacidad</string>
+    <string name="rate_u">Valora U</string>
+    <string name="feedback">Comentario</string>
+    <string name="keep_screen_on">Mantener la pantalla encendida</string>
+    <string name="exit">Salida</string>
+    <string name="select_files">Selecciona archivos</string>
+    <string name="search">buscar..</string>
+    <string name="history">Historia</string>
+    <string name="select_file">Seleccione Archivo</string>
+    <string name="no_files_fond">No hay archivos aficionado</string>
+    <string name="enter_file_name">Introduzca el nombre del archivo</string>
+    <string name="enter_text_to_convert">Ingrese texto para convertir..</string>
+    <string name="company_profile">Perfil de la empresa</string>
+    <string name="rename">Rebautizar</string>
+    <string name="merge_pdf">Fusionar PDF</string>
+    <string name="split_pdf">PDF dividido</string>
+    <string name="set_password">Configurar la clave</string>
+    <string name="favorite">Favorito</string>
+    <string name="view_mode">Modo de vista</string>
+    <string name="horizontal">Horizontal</string>
+    <string name="vertical">Vertical</string>
+    <string name="page_by_page">Por páginas</string>
+    <string name="night_mode">Modo nocturno</string>
+    <string name="thanks_for_your">Gracias por tu</string>
+    <string name="love_amp_support">Amor y apoyo</string>
+    <string name="details">Detalles</string>
+    <string name="file_name">Nombre del archivo</string>
+    <string name="path">Camino</string>
+    <string name="last_modified">Última modificación</string>
+    <string name="last_viewed">Visto por última vez</string>
+    <string name="size">Tamaño</string>
+    <string name="files">archivos</string>
+    <string name="text_to_pdf">Texto a PDF</string>
+    <string name="image_to_pdf">Imagen a PDF</string>
+    <string name="print_pdf">Imprimir PDF</string>
+    <string name="more_features_coming_soon">Más características próximamente</string>
+    <string name="go_to_the_page">Ir a la página</string>
+    <string name="enter_page_number">Ingrese el número de página</string>
+    <string name="ok">DE ACUERDO</string>
+    <string name="file_date">fecha_archivo</string>
+    <string name="file_size">tamaño del archivo</string>
+    <string name="name">nombre</string>
+    <string name="we_like_you_too">¡Nosotros también nos gustas!</string>
+    <string name="thanks_for_your_feedback">gracias por tus comentarios</string>
+    <string name="the_best_we_can_get">Lo mejor que podemos conseguir :)</string>
+    <string name="rate">Tasa</string>
+    <string name="sort_by">Ordenar por</string>
+    <string name="from_new_to_old">De nuevo a viejo</string>
+    <string name="from_old_to_new">De lo viejo a lo nuevo</string>
+    <string name="a_z">ARIZONA</string>
+    <string name="z_a">Z-A</string>
+    <string name="from_large_to_small">De grande a pequeño</string>
+    <string name="from_small_to_large">De pequeño a grande</string>
+    <string name="page">Página</string>
+    <string name="your_5_start_is_best_gift_and_encourage_for_us">Su 5 Start es el mejor regalo y aliento para nosotras.</string>
+    <string name="submit">Entregar</string>
+    <string name="no_data_found">Datos no encontrados</string>
+
+    <string name="delete_dialog_text">El archivo se eliminará permanentemente.\n¿Está seguro de que desea eliminar este archivo?</string>
+    <string name="delete_file">¿Borrar archivo?</string>
+    <string name="welcometo">Bienvenida a</string>
+    <string name="continue_with_ads">Continuar con anuncios</string>
+
+    <string name="remove_from_recent">Eliminar de los recientes</string>
+    <string name="splashcontinue">continuar</string>
+    <string name="clearhistorytext">¿Estás segura de que quieres borrar la historia?</string>
+
+    <string name="no_files_listed">No hay archivos listados</string>
+    <string name="permission_required_to_access_all_files">Permita el acceso al permiso de almacenamiento para enumerar archivos pdf</string>
+</resources>

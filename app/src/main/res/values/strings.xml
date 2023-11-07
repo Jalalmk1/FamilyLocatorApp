@@ -1,0 +1,174 @@
+<resources>
+    <string name="privacy_policy_link" translatable="false">https://sites.google.com/view/simple-pdf-reader-viewer/home</string>
+    <string name="my_gmail" translatable="false">cybilltechmobileapps@gmail.com</string>
+    <string name="billing_id" translatable="false">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhk3oNzStEMutU6+39loRptxiGU027T4FMXVaJZI/Jk7vZL/7MTMkbQijf4NTKa34yeULdDDm8tg+CGD3IztGdu8dvl5//jqOg9AvpstXIgxQWtnSguuSccvVKoJDx4pun7SpeQEWeNLAf+il3Y/GRKCUPMEpk7wSxu/A7L8iMDVC5LxEjrFa8LV9yzS6tu2EHVv7FTNYImTOvDSRO/oWYKqv7FqNNAv9htEqi4yltdGyZgkxELwotrGNDLMglvH4v6ozgsk5EQfShASsxbAtUwPhIisqvjY6T/qcHFHSCTXaoxsQ6EizHknJcZgjoebSXKH/UqD4I8J8W2ymbDJb/wIDAQAB</string>
+
+    <string name="app_name">PDF Reader</string>
+    <string name="permission_needed">Permission Needed</string>
+    <string name="cancel">Cancel</string>
+    <string name="allow">Allow</string>
+    <string name="permission_message">Storage Permission is required for getting files. Please allow it so you can use this application correctly</string>
+    <string name="permission_title"><b>PDF Reader </b>to allow files on your device.</string>
+    <string name="language_options">App Language </string>
+    <string name="system_default">System Default</string>
+    <string name="all_languages">All Languages</string>
+    <string name="handy_pdf_viewer">Organize all PDF files in one place</string>
+    <string name="reader">Reader</string>
+    <string name="pdf">PDF</string>
+    <string name="premium">Premium</string>
+    <string name="convert">Convert</string>
+    <string name="zeroselected">0 Selected</string>
+    <string name="selected">Selected</string>
+    <string name="subscribe_to_premium">Subscribe to Premium</string>
+    <string name="premium_subtitle">Get access to our ads free Experience seamless PDF reading.</string>
+    <string name="remove_nads">Remove\nAds</string>
+    <string name="better_nperformance">Better\nPerformance</string>
+    <string name="pdf_editor_naccess">PDF editor\nAccess</string>
+    <string name="get_50_discount">Get 50% Discount</string>
+    <string name="unlock_pro">Unlock Pro</string>
+    <string name="terms_t_t_t_tprivacy">Terms\t\t|\t\tPrivacy</string>
+    <string name="permission_deny_message">Permission Denied! Please Allow</string>
+    <string name="rootdir">Root Directory</string>
+    <string name="pdf_reader">PDF Reader</string>
+    <string name="home">Home</string>
+    <string name="recent">Recent</string>
+    <string name="favourite">Bookmark</string>
+    <string name="tools">Tools</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+    <string name="reent_files">Recent Files</string>
+    <string name="removefav">Remove favourite</string>
+    <string name="choose_images">Choose Images</string>
+    <string name="processing">Processing..</string>
+    <string name="browse_pdf">Browse PDF</string>
+    <string name="dark_mood">Dark Mode</string>
+    <string name="go_premium">Go Premium</string>
+    <string name="share_app">Share App</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="rate_u">Rate Us</string>
+    <string name="feedback">Feedback</string>
+    <string name="keep_screen_on">Keep Screen On</string>
+    <string name="exit">Exit</string>
+    <string name="select_files">Select Files</string>
+    <string name="search">Search..</string>
+    <string name="history">History</string>
+    <string name="select_file">Select File</string>
+    <string name="no_files_fond">No files found</string>
+    <string name="enter_file_name">Enter File Name</string>
+    <string name="enter_text_to_convert">Enter Text to Convert..</string>
+    <string name="company_profile">Company Profile</string>
+    <string name="rename">Rename</string>
+    <string name="merge_pdf">Merge PDF</string>
+    <string name="split_pdf">Split PDF</string>
+    <string name="set_password">Set Password</string>
+    <string name="favorite">Favorite</string>
+    <string name="view_mode">View Mode</string>
+    <string name="horizontal">Horizontal</string>
+    <string name="vertical">Vertical</string>
+    <string name="page_by_page">Page by page</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="thanks_for_your">Thanks for your</string>
+    <string name="love_amp_support">Love &amp; Support</string>
+    <string name="details">Details</string>
+    <string name="file_name">File Name</string>
+    <string name="path">Path</string>
+    <string name="last_modified">Last Modified</string>
+    <string name="last_viewed">Last Viewed</string>
+    <string name="size">Size</string>
+    <string name="files">Files</string>
+    <string name="text_to_pdf">Text To PDF</string>
+    <string name="image_to_pdf">Image to PDF</string>
+    <string name="print_pdf">Print PDF</string>
+    <string name="more_features_coming_soon">More features coming soon</string>
+    <string name="go_to_the_page">Go to the Page</string>
+    <string name="enter_page_number">Enter Page Number</string>
+    <string name="ok">OK</string>
+    <string name="file_date">file_date</string>
+    <string name="file_size">File size</string>
+    <string name="name">Name</string>
+    <string name="we_like_you_too">We like you too!</string>
+    <string name="thanks_for_your_feedback">Thanks for your feedback</string>
+    <string name="the_best_we_can_get">The best we can get :)</string>
+    <string name="rate">Rate</string>
+    <string name="sort_by">Sort by</string>
+    <string name="from_new_to_old">From new to old</string>
+    <string name="from_old_to_new">From old to new</string>
+    <string name="a_z">A-Z</string>
+    <string name="z_a">Z-A</string>
+    <string name="from_large_to_small">From large to small</string>
+    <string name="from_small_to_large">From small to large</string>
+    <string name="page">Page</string>
+    <string name="your_5_start_is_best_gift_and_encourage_for_us">Your 5 Start is best gift and encourage for us.</string>
+    <string name="submit">Submit</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="delete_dialog_text">File will be deleted permanently.\nAre you sure to want delete this file?</string>
+    <string name="delete_file">Delete File?</string>
+    <string name="welcometo">Welcome to</string>
+    <string name="continue_with_ads">Continue With Ads</string>
+    <string name="defaultbitmapcode" translatable="false">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
+26wblv8CuSLMFJHhZ8MAAAAASUVORK5CYII=</string>
+    <string name="privacysplashtext" translatable="false">By tapping <b>“Start”</b> you indicate that you have read our <b><u>Privacy Policy</u></b>.</string>
+    <string name="remove_from_recent">Remove from Recent</string>
+    <string name="splashcontinue">Start</string>
+    <string name="clearhistorytext">Are you sure you want to clear history?</string>
+    <string name="no_files_listed">No files listed</string>
+    <string name="permission_required_to_access_all_files">Permission required to access all files</string>
+
+</resources>

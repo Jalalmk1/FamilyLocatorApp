@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    <string name="privacy_policy_link" translatable="false">https://sites.google.com</string>-->
+<!--    <string name="my_gmail" translatable="false">bilal@gmail.com</string>-->
+<!--    <string name="billing_id" translatable="false">abcedefghijklmnopqrstuvwxyz</string>-->
+
+    <string name="app_name">पीडीएफ़ रीडर</string>
+    <string name="permission_needed">अनुमति की आवश्यकता है</string>
+    <string name="cancel">रद्द करना</string>
+    <string name="allow">अनुमति देना</string>
+    <string name="permission_message">फ़ाइलें प्राप्त करने के लिए लिखने की अनुमति आवश्यक है। कृपया इसे अनुमति दें ताकि आप इस एप्लिकेशन का सही ढंग से उपयोग कर सकें</string>
+    <string name="permission_title">फ़ाइलों को प्रबंधित करने के लिए, कृपया<b>पीडीएफ रीडर</b>को अपने डिवाइस पर फ़ाइलों को अनुमति देने की अनुमति दें।</string>
+    <string name="language_options">भाषा विकल्प</string>
+    <string name="system_default">प्रणालीगत चूक</string>
+    <string name="all_languages">सारी भाषाएँ</string>
+    <string name="handy_pdf_viewer">सुविधाजनक पीडीएफ व्यूअर</string>
+    <string name="reader">पाठक</string>
+    <string name="pdf">पीडीएफ</string>
+    <string name="premium">अधिमूल्य</string>
+    <string name="convert">बदलना</string>
+    <string name="zeroselected">0 चयनित</string>
+    <string name="selected">गिने चुने</string>
+    <string name="subscribe_to_premium">प्रीमियम की सदस्यता लें</string>
+    <string name="premium_subtitle">हमारे विज्ञापन मुक्त सहज पीडीएफ पढ़ने के अनुभव तक पहुंच प्राप्त करें।</string>
+    <string name="remove_nads">\nविज्ञापन हटाएँ</string>
+    <string name="better_nperformance">बेहतर\nप्रदर्शन</string>
+    <string name="pdf_editor_naccess">पीडीएफ संपादक\nपहुँच</string>
+    <string name="get_50_discount">50% छूट पाएं</string>
+    <string name="unlock_pro">प्रो अनलॉक करें</string>
+    <string name="terms_t_t_t_tprivacy">शर्तें\t\t|\t\tगोपनीयता</string>
+    <string name="permission_deny_message">अनुमति नहीं मिली! कृपया अनुमति दें</string>
+    <string name="rootdir">मूल निर्देशिका</string>
+    <string name="pdf_reader">पीडीएफ़ रीडर</string>
+    <string name="home">घर</string>
+    <string name="recent">हाल ही का</string>
+    <string name="favourite">पसंदीदा</string>
+    <string name="tools">औजार</string>
+    <string name="delete">मिटाना</string>
+    <string name="share">शेयर करना</string>
+    <string name="reent_files">हाल हीं के फाइल</string>
+    <string name="removefav">पसंदीदा हटाएँ</string>
+    <string name="choose_images">छवियाँ चुनें</string>
+    <string name="processing">प्रसंस्करण..</string>
+    <string name="browse_pdf">पीडीएफ ब्राउज़ करें</string>
+    <string name="dark_mood">डार्क मूड</string>
+    <string name="go_premium">प्रीमियम के लिए जाएँ</string>
+    <string name="share_app">ऐप शेयर करें</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="rate_u">दर यू</string>
+    <string name="feedback">प्रतिक्रिया</string>
+    <string name="keep_screen_on">स्क्रीन ऑन करो</string>
+    <string name="exit">बाहर निकलना</string>
+    <string name="select_files">फ़ाइलें चुनें</string>
+    <string name="search">खोज..</string>
+    <string name="history">इतिहास</string>
+    <string name="select_file">फ़ाइल का चयन करें</string>
+    <string name="no_files_fond">कोई फ़ाइल शौकीन नहीं</string>
+    <string name="enter_file_name">फ़ाइल नाम दर्ज करें</string>
+    <string name="enter_text_to_convert">कनवर्ट करने के लिए टेक्स्ट दर्ज करें..</string>
+    <string name="company_profile">कंपनी प्रोफाइल</string>
+    <string name="rename">नाम बदलें</string>
+    <string name="merge_pdf">पीडीएफ विलय</string>
+    <string name="split_pdf">पीडीएफ को विभाजित करें</string>
+    <string name="set_password">सांकेतिक शब्द लगना</string>
+    <string name="favorite">पसंदीदा</string>
+    <string name="view_mode">दृश्य मोड</string>
+    <string name="horizontal">क्षैतिज</string>
+    <string name="vertical">खड़ा</string>
+    <string name="page_by_page">पेज दर पेज</string>
+    <string name="night_mode">रात का मोड</string>
+    <string name="thanks_for_your">के लिए आपका धन्यवाद</string>
+    <string name="love_amp_support">प्यार और समर्थन</string>
+    <string name="details">विवरण</string>
+    <string name="file_name">फ़ाइल का नाम</string>
+    <string name="path">पथ</string>
+    <string name="last_modified">अंतिम बार संशोधित</string>
+    <string name="last_viewed">अंतिम बार देखा गया</string>
+    <string name="size">आकार</string>
+    <string name="files">फ़ाइलें</string>
+    <string name="text_to_pdf">पीडीएफ में टेक्स्ट करें</string>
+    <string name="image_to_pdf">पीडीएफ में छवि</string>
+    <string name="print_pdf">पीडीएफ प्रिंट करें</string>
+    <string name="more_features_coming_soon">अधिक सुविधाएँ जल्द ही आ रही हैं</string>
+    <string name="go_to_the_page">पेज पर जाएँ</string>
+    <string name="enter_page_number">पेज नंबर दर्ज करें</string>
+    <string name="ok">ठीक है</string>
+    <string name="file_date">फ़ाइल_दिनांक</string>
+    <string name="file_size">फ़ाइल का साइज़</string>
+    <string name="name">नाम</string>
+    <string name="we_like_you_too">हम भी आपको पसंद करते हैं!</string>
+    <string name="thanks_for_your_feedback">आपकी प्रतिक्रिया के लिए धन्यवाद</string>
+    <string name="the_best_we_can_get">सबसे अच्छा हम पा सकते हैं :)</string>
+    <string name="rate">दर</string>
+    <string name="sort_by">इसके अनुसार क्रमबद्ध करें</string>
+    <string name="from_new_to_old">नये से पुराने तक</string>
+    <string name="from_old_to_new">पुराने से नये तक</string>
+    <string name="a_z">ए-जेड</string>
+    <string name="z_a">जेड-ए</string>
+    <string name="from_large_to_small">बड़े से छोटे तक</string>
+    <string name="from_small_to_large">छोटे से लेकर बड़े तक</string>
+    <string name="page">पृष्ठ</string>
+    <string name="your_5_start_is_best_gift_and_encourage_for_us">आपका 5 स्टार्ट हमारे लिए सबसे अच्छा उपहार और प्रोत्साहन है</string>
+    <string name="submit">जमा करना</string>
+    <string name="no_data_found">डाटा प्राप्त नहीं हुआ</string>
+
+    <string name="delete_dialog_text">फ़ाइल स्थायी रूप से हटा दी जाएगी.\nक्या आप वाकई इस फ़ाइल को हटाना चाहते हैं?</string>
+    <string name="delete_file">फ़ाइल नष्ट करें?</string>
+    <string name="welcometo">आपका स्वागत है</string>
+    <string name="continue_with_ads">विज्ञापनों के साथ जारी रखें</string>
+
+    <string name="remove_from_recent">हाल ही में से हटा दें</string>
+    <string name="splashcontinue">जारी रखना</string>
+    <string name="clearhistorytext">क्या आप वाकई इतिहास साफ़ करना चाहते हैं?</string>
+
+    <string name="no_files_listed">कोई फ़ाइल सूचीबद्ध नहीं</string>
+    <string name="permission_required_to_access_all_files">कृपया पीडीएफ फाइलों को सूचीबद्ध करने के लिए भंडारण अनुमति तक पहुंच की अनुमति दें</string>
+</resources>

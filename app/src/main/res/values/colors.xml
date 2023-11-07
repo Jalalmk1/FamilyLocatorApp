@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#B61206</color>
+    <color name="appcolor_red_light">#FA190A</color>
+    <color name="appcolor_red">#B61206</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="statusbar_color">#E8E8E8</color>
+    <color name="teal_200">#B61206</color>
+    <color name="teal_700">#B61206</color>
+    <color name="black">#FF000000</color>
+    <color name="ablack">#403231</color>
+    <color name="bblack">#343839</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="foregrounddisable">#B3FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>

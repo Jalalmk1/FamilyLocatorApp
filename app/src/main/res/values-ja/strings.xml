@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    <string name="privacy_policy_link" translatable="false">https://sites.google.com</string>-->
+<!--    <string name="my_gmail" translatable="false">bilal@gmail.com</string>-->
+<!--    <string name="billing_id" translatable="false">abcedefghijklmnopqrstuvwxyz</string>-->
+
+    <string name="app_name">PDFリーダー</string>
+    <string name="permission_needed">許可が必要です</string>
+    <string name="cancel">キャンセル</string>
+    <string name="allow">許可する</string>
+    <string name="permission_message">ファイルを取得するには書き込み権限が必要です。このアプリケーションを正しく使用できるように許可してください</string>
+    <string name="permission_title">ファイルを管理するには、<b> PDF Reader </b> でデバイス上のファイルを許可してください。</string>
+    <string name="language_options">言語オプション</string>
+    <string name="system_default">システムのデフォルト</string>
+    <string name="all_languages">すべての言語</string>
+    <string name="handy_pdf_viewer">便利なPDFビューア</string>
+    <string name="reader">読者</string>
+    <string name="pdf">PDF</string>
+    <string name="premium">プレミアム</string>
+    <string name="convert">変換</string>
+    <string name="zeroselected">0 件が選択されました</string>
+    <string name="selected">選択済み</string>
+    <string name="subscribe_to_premium">プレミアムに登録する</string>
+    <string name="premium_subtitle">広告を無料で利用して、シームレスな PDF の閲覧を体験してください。</string>
+    <string name="remove_nads">広告を\n削除します</string>
+    <string name="better_nperformance">パフォーマンスの向上\n</string>
+    <string name="pdf_editor_naccess">PDF エディタ\nアクセス</string>
+    <string name="get_50_discount">50% 割引</string>
+    <string name="unlock_pro">プロのロックを解除する</string>
+    <string name="terms_t_t_t_tprivacy">規約\t\t|\t\tプライバシー</string>
+    <string name="permission_deny_message">許可が拒否されました！許可してください</string>
+    <string name="rootdir">ルートディレクトリ</string>
+    <string name="pdf_reader">PDFリーダー</string>
+    <string name="home">家</string>
+    <string name="recent">最近</string>
+    <string name="favourite">お気に入り</string>
+    <string name="tools">ツール</string>
+    <string name="delete">消去</string>
+    <string name="share">共有</string>
+    <string name="reent_files">最近使用したファイル</string>
+    <string name="removefav">お気に入りを削除</string>
+    <string name="choose_images">画像の選択</string>
+    <string name="processing">処理..</string>
+    <string name="browse_pdf">PDFを参照</string>
+    <string name="dark_mood">ダークムード</string>
+    <string name="go_premium">プレミアムに行く</string>
+    <string name="share_app">アプリを共有する</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="rate_u">レートU</string>
+    <string name="feedback">フィードバック</string>
+    <string name="keep_screen_on">画面をオンのままにする</string>
+    <string name="exit">出口</string>
+    <string name="select_files">ファイルの選択</string>
+    <string name="search">検索..</string>
+    <string name="history">歴史</string>
+    <string name="select_file">ファイルを選ぶ</string>
+    <string name="no_files_fond">お気に入りのファイルはありません</string>
+    <string name="enter_file_name">ファイル名を入力してください</string>
+    <string name="enter_text_to_convert">変換するテキストを入力してください。</string>
+    <string name="company_profile">会社概要</string>
+    <string name="rename">名前の変更</string>
+    <string name="merge_pdf">PDFを結合</string>
+    <string name="split_pdf">PDFの分割</string>
+    <string name="set_password">パスワードを設定してください</string>
+    <string name="favorite">お気に入り</string>
+    <string name="view_mode">ビューモード</string>
+    <string name="horizontal">水平</string>
+    <string name="vertical">垂直</string>
+    <string name="page_by_page">ページごとに</string>
+    <string name="night_mode">ナイトモード</string>
+    <string name="thanks_for_your">ありがとうございます</string>
+    <string name="love_amp_support">愛とサポート</string>
+    <string name="details">詳細</string>
+    <string name="file_name">ファイル名</string>
+    <string name="path">道</string>
+    <string name="last_modified">最終更新日</string>
+    <string name="last_viewed">最後に閲覧したもの</string>
+    <string name="size">サイズ</string>
+    <string name="files">ファイル</string>
+    <string name="text_to_pdf">テキストを PDF に変換</string>
+    <string name="image_to_pdf">画像をPDFに変換</string>
+    <string name="print_pdf">PDFを印刷する</string>
+    <string name="more_features_coming_soon">さらに多くの機能が近日公開予定</string>
+    <string name="go_to_the_page">ページへ行く</string>
+    <string name="enter_page_number">ページ番号を入力してください</string>
+    <string name="ok">OK</string>
+    <string name="file_date">ファイルの日付</string>
+    <string name="file_size">ファイルサイズ</string>
+    <string name="name">名前</string>
+    <string name="we_like_you_too">私たちもあなたのことが好きです！</string>
+    <string name="thanks_for_your_feedback">ご意見ありがとうございます</string>
+    <string name="the_best_we_can_get">私たちが得ることができる最高のもの:)</string>
+    <string name="rate">レート</string>
+    <string name="sort_by">並べ替え</string>
+    <string name="from_new_to_old">新しいものから古いものまで</string>
+    <string name="from_old_to_new">古いものから新しいものまで</string>
+    <string name="a_z">A-Z</string>
+    <string name="z_a">Z-A</string>
+    <string name="from_large_to_small">大きいものから小さいものまで</string>
+    <string name="from_small_to_large">小さいものから大きいものまで</string>
+    <string name="page">ページ</string>
+    <string name="your_5_start_is_best_gift_and_encourage_for_us">あなたの 5 Start は最高の贈り物であり、私たちにとっての励みです</string>
+    <string name="submit">提出する</string>
+    <string name="no_data_found">何もデータが見つかりませんでした</string>
+
+    <string name="delete_dialog_text">ファイルは完全に削除されます。\nこのファイルを削除してもよろしいですか?</string>
+    <string name="delete_file">ファイルを削除する？</string>
+    <string name="welcometo">へようこそ</string>
+    <string name="continue_with_ads">広告を続ける</string>
+
+    <string name="remove_from_recent">最近から削除</string>
+    <string name="splashcontinue">続く</string>
+    <string name="clearhistorytext">履歴を消去してもよろしいですか?</string>
+
+    <string name="no_files_listed">ファイルがリストされていません</string>
+    <string name="permission_required_to_access_all_files">PDF ファイルを一覧表示するには、ストレージ権限へのアクセスを許可してください</string>
+</resources>

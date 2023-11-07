@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_page_number"
+        android:icon="@drawable/pagenumberimg"
+        android:title="@string/page"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/navigation_viewmode"
+        android:icon="@drawable/viewmodeimg"
+        android:title="@string/view_mode"
+        app:showAsAction="withText" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_edit_preview"-->
+<!--        android:icon="@drawable/edit_preview_img"-->
+<!--        android:title="Edit"-->
+<!--        app:showAsAction="withText" />-->
+    <item
+        android:id="@+id/navigation_share_preview"
+        android:icon="@drawable/share_preview_img"
+        android:title="@string/share"
+        app:showAsAction="withText" />
+</menu>

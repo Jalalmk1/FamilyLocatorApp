@@ -1,0 +1,117 @@
+<resources>
+<!--    <string name="privacy_policy_link" translatable="false">https://sites.google.com</string>-->
+<!--    <string name="my_gmail" translatable="false">bilal@gmail.com</string>-->
+<!--    <string name="billing_id" translatable="false">abcedefghijklmnopqrstuvwxyz</string>-->
+
+    <string name="app_name">PDF阅读器</string>
+    <string name="permission_needed">需要许可</string>
+    <string name="cancel">取消</string>
+    <string name="allow">允许</string>
+    <string name="permission_message">获取文件需要写权限。请允许，以便您可以正确使用此应用程序</string>
+    <string name="permission_title">要管理文件，请允许<b>PDF阅读器</b>允许您的设备上的文件。</string>
+    <string name="language_options">语言选项</string>
+    <string name="system_default">系统默认值</string>
+    <string name="all_languages">所有语言</string>
+    <string name="handy_pdf_viewer">方便的 PDF 查看器</string>
+    <string name="reader">读者</string>
+    <string name="pdf">PDF</string>
+    <string name="premium">优质的</string>
+    <string name="convert">转变</string>
+    <string name="zeroselected">0 已选择</string>
+    <string name="selected">已选择</string>
+    <string name="subscribe_to_premium">订阅高级版</string>
+    <string name="premium_subtitle">免费访问我们的广告 体验无缝 PDF 阅读。</string>
+    <string name="remove_nads">删除\n广告</string>
+    <string name="better_nperformance">更好\n性能</string>
+    <string name="pdf_editor_naccess">PDF 编辑器\n访问</string>
+    <string name="get_50_discount">获得 50% 折扣</string>
+    <string name="unlock_pro">解锁专业版</string>
+    <string name="terms_t_t_t_tprivacy">条款\t\t|\t\t隐私</string>
+    <string name="permission_deny_message">没有权限！请允许</string>
+    <string name="rootdir">根目录</string>
+    <string name="pdf_reader">PDF阅读器</string>
+    <string name="home">家</string>
+    <string name="recent">最近的</string>
+    <string name="favourite">收藏夹</string>
+    <string name="tools">工具</string>
+    <string name="delete">删除</string>
+    <string name="share">分享</string>
+    <string name="reent_files">最近的文件</string>
+    <string name="removefav">删除收藏夹</string>
+    <string name="choose_images">选择图像</string>
+    <string name="processing">加工..</string>
+    <string name="browse_pdf">浏览PDF</string>
+    <string name="dark_mood">黑暗心情</string>
+    <string name="go_premium">升级至高级版</string>
+    <string name="share_app">分享应用程序</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="rate_u">评价U</string>
+    <string name="feedback">反馈</string>
+    <string name="keep_screen_on">保持屏幕开启</string>
+    <string name="exit">出口</string>
+    <string name="select_files">选择文件</string>
+    <string name="search">搜索..</string>
+    <string name="history">历史</string>
+    <string name="select_file">选择文件</string>
+    <string name="no_files_fond">没有喜欢的文件</string>
+    <string name="enter_file_name">输入文件名</string>
+    <string name="enter_text_to_convert">输入要转换的文本..</string>
+    <string name="company_profile">公司简介</string>
+    <string name="rename">改名</string>
+    <string name="merge_pdf">合并PDF</string>
+    <string name="split_pdf">分割PDF</string>
+    <string name="set_password">设置密码</string>
+    <string name="favorite">最喜欢的</string>
+    <string name="view_mode">查看模式</string>
+    <string name="horizontal">水平的</string>
+    <string name="vertical">垂直的</string>
+    <string name="page_by_page">一页一页</string>
+    <string name="night_mode">夜间模式</string>
+    <string name="thanks_for_your">谢谢你的</string>
+    <string name="love_amp_support">爱与支持</string>
+    <string name="details">细节</string>
+    <string name="file_name">文件名</string>
+    <string name="path">小路</string>
+    <string name="last_modified">上一次更改</string>
+    <string name="last_viewed">上次查看</string>
+    <string name="size">尺寸</string>
+    <string name="files">文件</string>
+    <string name="text_to_pdf">文本转PDF</string>
+    <string name="image_to_pdf">图像转PDF</string>
+    <string name="print_pdf">打印 PDF</string>
+    <string name="more_features_coming_soon">更多功能即将推出</string>
+    <string name="go_to_the_page">前往页面</string>
+    <string name="enter_page_number">输入页码</string>
+    <string name="ok">好的</string>
+    <string name="file_date">文件日期</string>
+    <string name="file_size">文件大小</string>
+    <string name="name">姓名</string>
+    <string name="we_like_you_too">我们也喜欢你！</string>
+    <string name="thanks_for_your_feedback">感谢您的反馈意见</string>
+    <string name="the_best_we_can_get">我们能得到的最好的:)</string>
+    <string name="rate">速度</string>
+    <string name="sort_by">排序方式</string>
+    <string name="from_new_to_old">从新到旧</string>
+    <string name="from_old_to_new">从旧到新</string>
+    <string name="a_z">从头到尾</string>
+    <string name="z_a">Z 到 A</string>
+    <string name="from_large_to_small">从大到小</string>
+    <string name="from_small_to_large">从小到大</string>
+    <string name="page">页</string>
+    <string name="your_5_start_is_best_gift_and_encourage_for_us">您的5 Start是对我们最好的礼物和鼓励</string>
+    <string name="submit">提交</string>
+    <string name="no_data_found">没有找到数据</string>
+
+    <string name="delete_dialog_text">文件将被永久删除。\n您确定要删除该文件吗？</string>
+    <string name="delete_file">删除文件？</string>
+    <string name="welcometo">欢迎来到</string>
+    <string name="continue_with_ads">继续广告</string>
+
+    <string name="remove_from_recent">从最近删除</string>
+    <string name="splashcontinue">继续</string>
+    <string name="clearhistorytext">您确定要清除历史记录吗？</string>
+
+    <string name="no_files_listed">没有列出文件</string>
+    <string name="permission_required_to_access_all_files">请允许访问存储权限才能列出 pdf 文件</string>
+
+</resources>

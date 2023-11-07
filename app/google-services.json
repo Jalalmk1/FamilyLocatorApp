@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798267871728",
+    "project_id": "pdf-reader-document-viewer",
+    "storage_bucket": "pdf-reader-document-viewer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798267871728:android:b9455de1feebdb055bcd35",
+        "android_client_info": {
+          "package_name": "com.pdf.pdfreader.viewer.filereader.documentreader.editor.free"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeXWPFXCz80NPnhBISm7UfMpCA9JihrTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

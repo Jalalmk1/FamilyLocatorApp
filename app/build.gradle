@@ -1,0 +1,110 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id("com.google.gms.google-services")
+    id 'com.google.firebase.crashlytics'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.example.bottomnavpdf'
+    compileSdk 33
+    defaultConfig {
+//        applicationId "com.example.bottomnavpdf"
+        applicationId "com.pdf.pdfreader.viewer.filereader.documentreader.editor.free"
+        minSdk 24
+        targetSdk 33
+        versionCode 6
+        versionName "1.6"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary true
+
+        packagingOptions {
+            jniLibs {
+                useLegacyPackaging = true
+            }
+        }
+
+    }
+    
+ /*   splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a', 'arm64-v8a', 'mips','mips64', 'x86', 'x86_64'
+            universalApk false
+        }
+    }
+*/
+    buildTypes {
+        debug{
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            resValue 'string', 'admob_appID', 'ca-app-pub-3940256099942544~3347511713'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            resValue 'string', 'admob_appID', 'ca-app-pub-6936676286918027~7924470986'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding = true
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.airbnb.android:lottie:5.2.0'
+//    implementation 'org.apache.pdfbox:pdfbox:2.0.0-RC3'
+    implementation("com.tom-roush:pdfbox-android:2.0.27.0")
+
+
+    implementation group: 'org.apache.poi', name: 'poi-scratchpad', version: '3.9'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation "com.android.billingclient:billing:5.0.0"
+    implementation 'com.anjlab.android.iab.v3:library:1.0.44'
+
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    implementation 'com.airbnb.android:lottie:5.2.0'
+    implementation project(path: ':smartAds')
+
+    //Firebase and Google
+    implementation(platform("com.google.firebase:firebase-bom:32.2.2"))
+    implementation 'com.google.firebase:firebase-config:21.4.1'
+    implementation 'com.google.firebase:firebase-crashlytics:18.4.0'
+    implementation 'com.google.firebase:firebase-analytics:21.3.0'
+    implementation 'com.google.android.gms:play-services-ads:22.2.0'
+
+}

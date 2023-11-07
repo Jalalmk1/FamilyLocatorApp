@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "887743761025",
+    "project_id": "pdf-reader-dummy",
+    "storage_bucket": "pdf-reader-dummy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887743761025:android:f73f22eaea56ad3e30db80",
+        "android_client_info": {
+          "package_name": "com.example.bottomnavpdf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "887743761025-oj2vcn39uqmvhjn27veugtcvvd8cj246.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwUV1GxPMmSe__x_EJL-rOk1Er7zIdtbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "887743761025-oj2vcn39uqmvhjn27veugtcvvd8cj246.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
