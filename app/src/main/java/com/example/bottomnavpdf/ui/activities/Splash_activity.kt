@@ -96,7 +96,8 @@ class splash_activity : AppCompatActivity() {
                             startActivity(intent)
                             finish()
                         } else {
-                            val intent = Intent(this@splash_activity, permission_activity::class.java)
+                            val intent =
+                                Intent(this@splash_activity, permission_activity::class.java)
                             startActivity(intent)
                             finish()
                         }
@@ -118,12 +119,13 @@ class splash_activity : AppCompatActivity() {
             }
         }
 
-        lifecycleScope.launch(Dispatchers.IO){
+        lifecycleScope.launch(Dispatchers.IO) {
             delay(5000)
-            withContext(Dispatchers.Main){
+            withContext(Dispatchers.Main) {
                 binding.lottieAnim.visibility = View.GONE
                 binding.splashcontinue.visibility = View.VISIBLE
                 firstLogin = sharedPreferences!!.getBoolean(Constants.first_login, true)
+
                 if (firstLogin) {
                     binding.splshPrivacy.visibility = View.VISIBLE
                 } else {
@@ -131,6 +133,7 @@ class splash_activity : AppCompatActivity() {
                 }
             }
         }
+
 
         AdManager.init(
             application,

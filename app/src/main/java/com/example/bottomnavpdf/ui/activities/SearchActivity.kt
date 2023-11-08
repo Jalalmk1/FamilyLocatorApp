@@ -39,6 +39,7 @@ import com.example.bottomnavpdf.databinding.ActivitySearchBinding
 import com.example.bottomnavpdf.`interface`.Main_selectedItems
 import com.example.bottomnavpdf.`interface`.OnItemClickListener
 import com.example.bottomnavpdf.`interface`.myCallback
+import com.example.bottomnavpdf.ui.home.HomeFragment
 import com.example.bottomnavpdf.utils.FvrtFilesBook
 import com.example.bottomnavpdf.utils.RecentFilesBook
 import com.example.bottomnavpdf.utils.RecentFilesBook.allrecentFileList
@@ -115,7 +116,21 @@ class SearchActivity : AppCompatActivity() {
                                 binding.recyclerview,
                                 object : Main_selectedItems {
                                     override fun main_onItemselected(position: Int) {
-
+                                        val openlist = originalFileList[position]
+                                        val file = File(openlist.pdfFilePath)
+                                        if (file.exists() && file.isFile) {
+                                            val intent = Intent(this@SearchActivity, viewerPdf::class.java)
+                                                .putExtra("key", file.absolutePath)
+                                            startActivity(intent)
+                                        } else {
+                                            HomeFragment.originalFileList.removeAt(position)
+                                            mAdapter.notifyItemRemoved(position)
+                                            Toast.makeText(
+                                                this@SearchActivity,
+                                                "Sorry item not found!",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                        }
                                     }
                                 },
                                 this , false

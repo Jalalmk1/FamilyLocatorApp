@@ -616,6 +616,7 @@ class HomeFragment() : Fragment() {
             500
         )
 
+
         lifecycleScope.launch(Dispatchers.IO) {
             while (!isReadPermission()) {
                 withContext(Dispatchers.Main) {
@@ -836,8 +837,11 @@ class HomeFragment() : Fragment() {
 
         Log.e("isReadPermission", "permission = ${isReadPermission()}")
         if (isReadPermission()) {
-            if (permissionLayout?.visibility != View.GONE)
+            if (permissionLayout?.visibility != View.GONE) {
                 permissionLayout?.visibility = View.GONE
+            }
+        }else{
+
         }
 
         loaderViewModel.fetchPdfFiles(type, order, object : myCallback {
@@ -949,8 +953,12 @@ class HomeFragment() : Fragment() {
                     titleBottom.dateCreatedName
                 bottomSheetView.findViewById<TextView>(R.id.text_size_bottom).text =
                     titleBottom.sizeName
-                bottomSheetView.findViewById<TextView>(R.id.text_path_bottom).text =
-                    titleBottom.pdfFilePath
+
+                val fileName = titleBottom.pdfFilePath
+                val file = File(fileName)
+
+                bottomSheetView.findViewById<TextView>(R.id.text_path_bottom).text = file.parentFile!!.name
+
                 bottomSheetView.findViewById<View>(R.id.bottomsheet_topdetail)
                     .setOnClickListener {
                         val file = File(titleBottom.pdfFilePath)
@@ -1347,8 +1355,12 @@ class HomeFragment() : Fragment() {
                     titleBottom.dateCreatedName
                 bottomSheetView.findViewById<TextView>(R.id.text_size_bottom).text =
                     titleBottom.sizeName
-                bottomSheetView.findViewById<TextView>(R.id.text_path_bottom).text =
-                    titleBottom.pdfFilePath
+
+                val fileName = titleBottom.pdfFilePath
+                val file = File(fileName)
+
+                bottomSheetView.findViewById<TextView>(R.id.text_path_bottom).text = file.parentFile!!.name
+
                 bottomSheetView.findViewById<View>(R.id.bottomsheet_topdetail)
                     .setOnClickListener {
                         val file = File(titleBottom.pdfFilePath)

@@ -8,7 +8,7 @@
     <string name="cancel">Cancel</string>
     <string name="allow">Allow</string>
     <string name="permission_message">Storage Permission is required for getting files. Please allow it so you can use this application correctly</string>
-    <string name="permission_title"><b>PDF Reader </b>to allow files on your device.</string>
+    <string name="permission_title"><b>PDF Reader </b>to access all your files.</string>
     <string name="language_options">App Language </string>
     <string name="system_default">System Default</string>
     <string name="all_languages">All Languages</string>
@@ -37,7 +37,7 @@
     <string name="delete">Delete</string>
     <string name="share">Share</string>
     <string name="reent_files">Recent Files</string>
-    <string name="removefav">Remove favourite</string>
+    <string name="removefav">Remove from Bookmark</string>
     <string name="choose_images">Choose Images</string>
     <string name="processing">Processing..</string>
     <string name="browse_pdf">Browse PDF</string>
@@ -61,7 +61,7 @@
     <string name="merge_pdf">Merge PDF</string>
     <string name="split_pdf">Split PDF</string>
     <string name="set_password">Set Password</string>
-    <string name="favorite">Favorite</string>
+    <string name="favorite">Bookmark</string>
     <string name="view_mode">View Mode</string>
     <string name="horizontal">Horizontal</string>
     <string name="vertical">Vertical</string>

@@ -21,15 +21,18 @@ import java.util.*
 class language_Activity : AppCompatActivity() {
     var selectedlang: String = "en"
     lateinit var binding: ActivityLanguageBinding
+    val selected = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLanguageBinding.inflate(layoutInflater)
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-        window.statusBarColor = Color.WHITE
+        window.statusBarColor = getColor(R.color.white)
+
         setContentView(binding.root)
         binding.onBackPressed.setOnClickListener {
             onBackPressed()
         }
+
         binding.languageforwardbtn.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 if (Environment.isExternalStorageManager()) {
@@ -45,6 +48,7 @@ class language_Activity : AppCompatActivity() {
                 if (checkReadWritePermission()) {
 //                    isfrom_Splash = true
 //                    val intent = Intent(this@language_Activity, premiumActivity::class.java)
+
                     val intent = Intent(this@language_Activity, MainActivity::class.java)
                     continueforward(intent)
                 } else {
@@ -52,21 +56,37 @@ class language_Activity : AppCompatActivity() {
                     continueforward(intent)
                 }
             }
+
             updateLanguage(selectedlang)
             val myEdit: SharedPreferences.Editor =
                 getSharedPreferences(Constants.pref_name, MODE_PRIVATE).edit()
             myEdit.putBoolean(Constants.first_login, false)
             myEdit.apply()
         }
+
+        val sharedPreferences = getSharedPreferences(Constants.pref_name, MODE_PRIVATE)
+
+        val code = sharedPreferences.getString(Constants.SELECTED_LANGUAGE, "en")
+
         binding.btLangDefault.setOnClickListener {
             Setdefaultvalues()
             selectedlang = "en"
+
+            if (code.equals(selectedlang)) {
+                binding.btLangDefaultCheck.visibility = View.VISIBLE
+            }
+
             binding.btLangDefaultCheck.visibility = View.VISIBLE
             binding.btLangDefault.setBackgroundResource(R.drawable.btn_curve)
         }
+
         binding.btLangEnglish.setOnClickListener {
             Setdefaultvalues()
             selectedlang = "en"
+            if (code.equals(selectedlang)) {
+                binding.btLangDefaultCheck.visibility = View.VISIBLE
+            }
+
             binding.btLangEnglishCheck.visibility = View.VISIBLE
             binding.btLangDefault.setBackgroundResource(R.drawable.btn_curve)
             binding.btLangEnglish.setBackgroundResource(R.drawable.btn_curve)
@@ -75,30 +95,52 @@ class language_Activity : AppCompatActivity() {
         binding.btLangSpanish.setOnClickListener {
             Setdefaultvalues()
             selectedlang = "es"
+            if (code.equals(selectedlang)) {
+                binding.btLangDefaultCheck.visibility = View.VISIBLE
+            }
             binding.btLangSpanishCheck.visibility = View.VISIBLE
             binding.btLangSpanish.setBackgroundResource(R.drawable.btn_curve)
         }
         binding.btLangHindi.setOnClickListener {
             Setdefaultvalues()
             selectedlang = "hi"
+
+            if (code.equals(selectedlang)) {
+                binding.btLangDefaultCheck.visibility = View.VISIBLE
+            }
+
             binding.btLangHindiCheck.visibility = View.VISIBLE
             binding.btLangHindi.setBackgroundResource(R.drawable.btn_curve)
         }
         binding.btLangGerman.setOnClickListener {
             Setdefaultvalues()
             selectedlang = "de"
+
+            if (code.equals(selectedlang)) {
+                binding.btLangDefaultCheck.visibility = View.VISIBLE
+            }
+
             binding.btLangGermanCheck.visibility = View.VISIBLE
             binding.btLangGerman.setBackgroundResource(R.drawable.btn_curve)
         }
         binding.btLangTurkey.setOnClickListener {
             Setdefaultvalues()
             selectedlang = "tr"
+            if (code.equals(selectedlang)) {
+                binding.btLangDefaultCheck.visibility = View.VISIBLE
+            }
+
             binding.btLangTurkeyCheck.visibility = View.VISIBLE
             binding.btLangTurkey.setBackgroundResource(R.drawable.btn_curve)
         }
         binding.btLangFranch.setOnClickListener {
             Setdefaultvalues()
             selectedlang = "fr"
+
+            if (code.equals(selectedlang)) {
+                binding.btLangDefaultCheck.visibility = View.VISIBLE
+            }
+
             binding.btLangFranchCheck.visibility = View.VISIBLE
             binding.btLangFranch.setBackgroundResource(R.drawable.btn_curve)
         }
@@ -106,18 +148,29 @@ class language_Activity : AppCompatActivity() {
         binding.btLangJapan.setOnClickListener {
             Setdefaultvalues()
             selectedlang = "ja"
+            if (code.equals(selectedlang)) {
+                binding.btLangDefaultCheck.visibility = View.VISIBLE
+            }
             binding.btLangJapanCheck.visibility = View.VISIBLE
             binding.btLangJapan.setBackgroundResource(R.drawable.btn_curve)
         }
         binding.btLangArabic.setOnClickListener {
             Setdefaultvalues()
             selectedlang = "ar"
+            if (code.equals(selectedlang)) {
+                binding.btLangDefaultCheck.visibility = View.VISIBLE
+            }
+
             binding.btLangArabicCheck.visibility = View.VISIBLE
             binding.btLangArabic.setBackgroundResource(R.drawable.btn_curve)
         }
         binding.btLangChina.setOnClickListener {
             Setdefaultvalues()
             selectedlang = "zh"
+            if (code.equals(selectedlang)) {
+                binding.btLangDefaultCheck.visibility = View.VISIBLE
+            }
+
             binding.btLangChinaCheck.visibility = View.VISIBLE
             binding.btLangChina.setBackgroundResource(R.drawable.btn_curve)
         }
@@ -141,16 +194,20 @@ class language_Activity : AppCompatActivity() {
         binding.btLangJapanCheck.visibility = View.GONE
         binding.btLangArabicCheck.visibility = View.GONE
         binding.btLangChinaCheck.visibility = View.GONE
-        binding.btLangDefault.setBackgroundColor(getColor(R.color.transparent))
-        binding.btLangEnglish.setBackgroundColor(getColor(R.color.transparent))
-        binding.btLangSpanish.setBackgroundColor(getColor(R.color.transparent))
-        binding.btLangHindi.setBackgroundColor(getColor(R.color.transparent))
-        binding.btLangGerman.setBackgroundColor(getColor(R.color.transparent))
-        binding.btLangTurkey.setBackgroundColor(getColor(R.color.transparent))
-        binding.btLangJapan.setBackgroundColor(getColor(R.color.transparent))
-        binding.btLangArabic.setBackgroundColor(getColor(R.color.transparent))
-        binding.btLangChina.setBackgroundColor(getColor(R.color.transparent))
-        binding.btLangFranch.setBackgroundColor(getColor(R.color.transparent))
+
+
+        /*
+
+          binding.btLangDefault.setBackgroundColor(getColor(R.color.transparent))
+          binding.btLangEnglish.setBackgroundColor(getColor(R.color.transparent))
+          binding.btLangSpanish.setBackgroundColor(getColor(R.color.transparent))
+          binding.btLangHindi.setBackgroundColor(getColor(R.color.transparent))
+          binding.btLangGerman.setBackgroundColor(getColor(R.color.transparent))
+          binding.btLangTurkey.setBackgroundColor(getColor(R.color.transparent))
+          binding.btLangJapan.setBackgroundColor(getColor(R.color.transparent))
+          binding.btLangArabic.setBackgroundColor(getColor(R.color.transparent))
+          binding.btLangChina.setBackgroundColor(getColor(R.color.transparent))
+          binding.btLangFranch.setBackgroundColor(getColor(R.color.transparent))*/
 
     }
 

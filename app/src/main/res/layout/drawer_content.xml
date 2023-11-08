@@ -31,7 +31,8 @@
                 android:src="@drawable/menu_drawer_icon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
             <TextView
                 android:id="@+id/PdfReader_title"
@@ -43,7 +44,7 @@
                 android:gravity="center_vertical"
                 android:text="@string/pdf_reader"
                 android:textColor="@color/appcolor_red"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/dashboard_search"
                 app:layout_constraintStart_toEndOf="@+id/iv_open_drawer"
@@ -59,7 +60,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/dashboard_checkbox"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/search_icon" />
+                app:srcCompat="@drawable/search_icon"
+                android:tint="#6E6E6E"
+                />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/dashboard_checkbox"
@@ -71,7 +74,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:src="@drawable/sort_ic"
-
+                android:tint="#6E6E6E"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -220,6 +223,29 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/layoutbottom11"
+        android:gravity="center"
+        android:background="@color/win_bg"
+        android:id="@+id/downloadCompleted"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Downloading update, Please wait"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto"
+            android:padding="5dp"
+            />
+-->
+    </LinearLayout>
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/layoutbottom11"
         android:layout_width="match_parent"
@@ -348,6 +374,8 @@
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

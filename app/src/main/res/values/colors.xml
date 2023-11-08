@@ -13,4 +13,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="foregrounddisable">#B3FFFFFF</color>
     <color name="transparent">#00000000</color>
+    <color name="win_bg">#EFEFEF</color>
 </resources>

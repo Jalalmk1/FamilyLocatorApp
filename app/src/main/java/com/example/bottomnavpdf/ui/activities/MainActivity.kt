@@ -4,6 +4,7 @@ package com.example.bottomnavpdf.ui.activities
 import android.Manifest
 import android.app.Dialog
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -21,6 +22,7 @@ import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
 import android.widget.CompoundButton
+import android.widget.LinearLayout
 import android.widget.RatingBar
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
@@ -30,9 +32,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -52,6 +54,15 @@ import com.example.bottomnavpdf.ui.home.HomeFragment
 import com.example.bottomnavpdf.ui.recent.RecentFragment
 import com.example.bottomnavpdf.ui.tool.ToolsFragment
 import com.example.bottomnavpdf.utils.Constants
+import com.google.android.material.snackbar.Snackbar
+import com.google.android.play.core.appupdate.AppUpdateInfo
+import com.google.android.play.core.appupdate.AppUpdateManager
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory
+import com.google.android.play.core.appupdate.testing.FakeAppUpdateManager
+import com.google.android.play.core.install.InstallStateUpdatedListener
+import com.google.android.play.core.install.model.AppUpdateType
+import com.google.android.play.core.install.model.InstallStatus
+import com.google.android.play.core.install.model.UpdateAvailability
 import com.usman.smartads.AdManager
 import java.io.*
 import java.util.*
@@ -68,25 +79,78 @@ class MainActivity : AppCompatActivity() {
     var currentFrag: String? = "home"
     var selectedadapter: String? = null
     var selectall_clicked = false
+    private var appUpdateManager: AppUpdateManager? = null
+    private var fakeAppUpdateManager: FakeAppUpdateManager? = null
 
-    companion object {
+    private var downloadComplete:LinearLayout? = null
+
+        companion object {
         var selectedFileList: ArrayList<FileItems> = ArrayList()
         var positionofadapter: ArrayList<Int> = ArrayList()
+    }
+
+    fun showSnackBarForCompleteUpdate(){
+
+
+    }
+
+
+/*    private val listener: InstallStateUpdatedListener? = InstallStateUpdatedListener { installState ->
+
+        if (installState.installStatus() == InstallStatus.DOWNLOADED) {
+            val i = baseContext.packageManager.getLaunchIntentForPackage(baseContext.packageName)
+            i!!.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(i)
+            finish()
+        }
+    }*/
+
+    private fun startUpdate(info: AppUpdateInfo, type: Int) {
+       /* appUpdateManager?.startUpdateFlowForResult(info, type, this, 5)
+
+        appUpdateManager?.appUpdateInfo?.addOnSuccessListener { info ->
+            flexibleUpdateDownloadCompleted()
+        }*/
+
+//        fakeAppUpdateManager?.startUpdateFlowForResult(info, type, this, 5)
+
+        appUpdateManager?.appUpdateInfo?.addOnSuccessListener { info ->
+            flexibleUpdateDownloadCompleted()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-        window.statusBarColor = Color.WHITE
+        window.statusBarColor = getColor(R.color.white)
 
         setContentView(binding.root)
+
+        val myEdit: SharedPreferences.Editor =
+            getSharedPreferences(Constants.pref_name, MODE_PRIVATE).edit()
+        myEdit.putBoolean(Constants.first_login, false)
+        myEdit.apply()
+
+
+
+        downloadComplete = findViewById(R.id.downloadCompleted)
+
         val anim = ScaleAnimation(
             1f, 0.9f, 1f, 0.9f,
             Animation.RESTART, 0.5f, Animation.RESTART, 0.5f
         )
         anim.duration = 150
         anim.repeatCount = 0
+
+        appUpdateManager = AppUpdateManagerFactory.create(this)
+
+       /*  fakeAppUpdateManager = FakeAppUpdateManager(this)
+        fakeAppUpdateManager?.registerListener(listener)*/
+//        appUpdateManager?.registerListener(listener)
+
+//        appUpdateManager?.registerListener(this)
+
 
         homefragment = HomeFragment(object : Main_selectedItems {
             override fun main_onItemselected(position: Int) {
@@ -266,6 +330,7 @@ class MainActivity : AppCompatActivity() {
         binding.drawercontentlayout.dashboardSearch.setOnClickListener {
             startActivity(Intent(this, SearchActivity::class.java))
         }
+
         binding.drawercontentlayout.dashboardCheckbox.setOnClickListener {
             if (!currentFrag.isNullOrEmpty() && currentFrag.equals("home")) {
                 (homefragment as HomeFragment).sortFiles()
@@ -487,6 +552,12 @@ class MainActivity : AppCompatActivity() {
             binding.drawercontentlayout.layoutbottomselected.visibility = View.GONE
             binding.drawercontentlayout.selectallfilesBtn.setImageResource(R.drawable.selectall_icon)
 
+            binding.drawercontentlayout.userSelected.setImageResource(R.drawable.selectall_icon2)
+            binding.drawercontentlayout.selectallfilesBtn.setImageResource(R.drawable.selectall_icon)
+            isfromlongclick = false
+            AdapterFavouriteFiles.isfromlongclick = false
+            AdapterRecentFiles.isfromlongclick = false
+
         }
         binding.drawercontentlayout.bottomSelectedShare.setOnClickListener {
             if (selectedFileList.isEmpty()) {
@@ -579,6 +650,69 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+//        fakeAppUpdateManager?.setUpdateAvailable(1);
+
+        appUpdateManager?.appUpdateInfo?.addOnSuccessListener {
+            if (it.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
+                && it.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)
+            ) {
+                Log.e("isUpdateAvailable","update available")
+                startUpdate(it,AppUpdateType.FLEXIBLE)
+            }else{
+                Log.e("isUpdateAvailable","update not availble")
+            }
+        }
+
+/*        appUpdateManager?.appUpdateInfo?.addOnSuccessListener {info->
+
+            if (info.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE) { // UPDATE IS AVAILABLE
+                downloadingUpdate?.visibility = View.VISIBLE
+                downloadingUpdate?.visibility = View.GONE
+                startUpdate(info, AppUpdateType.FLEXIBLE)
+            }
+        }*/
+
+    }
+
+    private fun flexibleUpdateDownloadCompleted() {
+
+        Snackbar.make(
+            findViewById(R.id.downloadCompleted),
+            "An update has just been downloaded.",
+            Snackbar.LENGTH_INDEFINITE
+        ).apply {
+            setAction("RESTART") { appUpdateManager?.completeUpdate() }
+            setActionTextColor(Color.WHITE)
+            show()
+        }
+
+      /*  Snackbar.make(
+            findViewById(R.id.downloadSnack),
+            "An update has just been downloaded.",
+            Snackbar.LENGTH_INDEFINITE
+        ).apply {
+            setAction("Install") { fakeAppUpdateManager?.completeUpdate() }
+            setActionTextColor(Color.WHITE)
+            show()
+        }*/
+    }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+        if (requestCode == 5) {
+            if (resultCode != AppCompatActivity.RESULT_OK) {
+                // If the update is cancelled or fails, you can request to start the update again.
+                Log.e("ERROR", "Update flow failed! Result code: $resultCode")
+            }
+        }
+
+        super.onActivityResult(requestCode, resultCode, data)
     }
 
     private fun AllowButton() {
@@ -876,6 +1010,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.LLExit.setOnClickListener {
             drawerLayout.closeDrawer(GravityCompat.START)
+
             onBackPressed()
         }
         binding.LLshareapp.setOnClickListener {
@@ -1099,4 +1234,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
 }

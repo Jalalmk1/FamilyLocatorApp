@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e8e8e8"
+    android:background="@color/win_bg"
     tools:context=".ui.activities.language_Activity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -25,7 +25,7 @@
                 android:id="@+id/onBackPressed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16sp"
+                android:layout_marginStart="16dp"
                 android:src="@drawable/backimg"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -60,15 +60,14 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="16sp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/framenativead"
@@ -84,12 +83,14 @@
             android:fontFamily="@font/roboto"
             android:text="@string/system_default"
             android:textColor="#8A8989"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:layout_marginStart="6dp"
+            />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/bt_lang_default"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="50dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/btn_curve"
             android:gravity="center_vertical"
@@ -106,7 +107,9 @@
                 android:gravity="center_vertical"
                 android:text="English"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:id="@+id/defaultLang"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -131,11 +134,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="23dp"
             android:fontFamily="@font/roboto"
             android:text="@string/all_languages"
             android:textColor="#8A8989"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:layout_marginStart="6dp"
+            />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -149,12 +154,14 @@
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/bt_lang_english"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="16sp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="12sp"
-                    android:paddingEnd="0dp">
+                    android:paddingEnd="0dp"
+                    android:background="@drawable/btn_curve"
+                    >
 
                     <TextView
                         android:layout_width="0dp"
@@ -165,7 +172,9 @@
                         android:gravity="center_vertical"
                         android:text="English"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -185,18 +194,24 @@
                         android:layout_gravity="center_vertical"
                         android:buttonTint="@color/appcolor_red"
                         android:checked="true"
-                        android:visibility="invisible" />
+                        android:visibility="visible"
+
+                        />
+
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/bt_lang_spanish"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="16sp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="12sp"
-                    android:paddingEnd="0dp">
+                    android:paddingEnd="0dp"
+                    android:background="@drawable/btn_curve"
+
+                    >
 
                     <TextView
                         android:layout_width="0dp"
@@ -207,7 +222,9 @@
                         android:gravity="center_vertical"
                         android:text="Spanish"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -227,18 +244,20 @@
                         android:layout_gravity="center_vertical"
                         android:buttonTint="@color/appcolor_red"
                         android:checked="true"
-                        android:visibility="invisible" />
+                        android:visibility="gone" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/bt_lang_hindi"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="16sp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="12sp"
-                    android:paddingEnd="0dp">
+                    android:paddingEnd="0dp"
+                    android:background="@drawable/btn_curve"
+                    >
 
                     <TextView
                         android:layout_width="0dp"
@@ -269,18 +288,20 @@
                         android:layout_gravity="center_vertical"
                         android:buttonTint="@color/appcolor_red"
                         android:checked="true"
-                        android:visibility="invisible" />
+                        android:visibility="gone" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/bt_lang_german"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="16sp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="12sp"
-                    android:paddingEnd="0dp">
+                    android:paddingEnd="0dp"
+                    android:background="@drawable/btn_curve"
+                    >
 
                     <TextView
                         android:layout_width="0dp"
@@ -311,18 +332,20 @@
                         android:layout_gravity="center_vertical"
                         android:buttonTint="@color/appcolor_red"
                         android:checked="true"
-                        android:visibility="invisible" />
+                        android:visibility="gone" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/bt_lang_franch"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="16sp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="12sp"
-                    android:paddingEnd="0dp">
+                    android:paddingEnd="0dp"
+                    android:background="@drawable/btn_curve"
+                    >
 
                     <TextView
                         android:layout_width="0dp"
@@ -353,18 +376,20 @@
                         android:layout_gravity="center_vertical"
                         android:buttonTint="@color/appcolor_red"
                         android:checked="true"
-                        android:visibility="invisible" />
+                        android:visibility="gone" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/bt_lang_turkey"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="16sp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="12sp"
-                    android:paddingEnd="0dp">
+                    android:paddingEnd="0dp"
+                    android:background="@drawable/btn_curve"
+                    >
 
                     <TextView
                         android:layout_width="0dp"
@@ -395,18 +420,20 @@
                         android:layout_gravity="center_vertical"
                         android:buttonTint="@color/appcolor_red"
                         android:checked="true"
-                        android:visibility="invisible" />
+                        android:visibility="gone" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/bt_lang_japan"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="16sp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="12sp"
-                    android:paddingEnd="0dp">
+                    android:paddingEnd="0dp"
+                    android:background="@drawable/btn_curve"
+                    >
 
                     <TextView
                         android:layout_width="0dp"
@@ -437,18 +464,20 @@
                         android:layout_gravity="center_vertical"
                         android:buttonTint="@color/appcolor_red"
                         android:checked="true"
-                        android:visibility="invisible" />
+                        android:visibility="gone" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/bt_lang_arabic"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="16sp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="12sp"
-                    android:paddingEnd="0dp">
+                    android:paddingEnd="0dp"
+                    android:background="@drawable/btn_curve"
+                    >
 
                     <TextView
                         android:layout_width="0dp"
@@ -479,18 +508,19 @@
                         android:layout_gravity="center_vertical"
                         android:buttonTint="@color/appcolor_red"
                         android:checked="true"
-                        android:visibility="invisible" />
+                        android:visibility="gone" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/bt_lang_china"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="16sp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="12sp"
-                    android:paddingEnd="0dp">
+                    android:paddingEnd="0dp"
+                    android:background="@drawable/btn_curve">
 
                     <TextView
                         android:layout_width="0dp"
@@ -521,7 +551,7 @@
                         android:layout_gravity="center_vertical"
                         android:buttonTint="@color/appcolor_red"
                         android:checked="true"
-                        android:visibility="invisible" />
+                        android:visibility="gone" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.appcompat.widget.LinearLayoutCompat>
         </ScrollView>

@@ -29,7 +29,7 @@ class adapter_AllFiles(
     private var filelist: ArrayList<FileItems>,
     val recyclerview: RecyclerView,
     val listenermainupdate: Main_selectedItems,
-    val requireContext: Context,var type:Boolean = true
+    val requireContext: Context, var type: Boolean = true
 ) :
     RecyclerView.Adapter<ViewHolder>() {
     private var mListener: OnItemClickListener? = null
@@ -86,7 +86,7 @@ class adapter_AllFiles(
             filelist,
             recyclerview,
             listenermainupdate,
-            requireContext,type
+            requireContext, type
         )
         Log.d("onBindViewHolder", "listview\t")
     }
@@ -132,10 +132,8 @@ class adapter_AllFiles(
             filelist: ArrayList<FileItems>,
             recyclerview: RecyclerView,
             listenermainupdate: Main_selectedItems,
-            requireContext: Context , type: Boolean
+            requireContext: Context, type: Boolean
         ) {
-
-
 
 
             try {
@@ -166,7 +164,7 @@ class adapter_AllFiles(
                     } else {
                         mBinding.checkBoxSelect.isChecked = mCurrentItem.isChecked
 
-                        if(mCurrentItem.isChecked){
+                        if (mCurrentItem.isChecked) {
                             MainActivity.selectedFileList.add(mCurrentItem)
                             MainActivity.positionofadapter.add(adapterPosition)
                             listenermainupdate.main_onItemselected(adapterPosition)
@@ -189,11 +187,11 @@ class adapter_AllFiles(
                             mCurrentItem.isChecked = !mCurrentItem.isChecked
                             mBinding.checkBoxSelect.isChecked = mCurrentItem.isChecked
 
-                            if(mCurrentItem.isChecked){
+                            if (mCurrentItem.isChecked) {
                                 MainActivity.selectedFileList.add(mCurrentItem)
                                 MainActivity.positionofadapter.add(adapterPosition)
                                 listenermainupdate.main_onItemselected(adapterPosition)
-                            }else{
+                            } else {
                                 MainActivity.selectedFileList.remove(mCurrentItem)
                                 MainActivity.positionofadapter.remove(adapterPosition)
                                 listenermainupdate.main_onItemselected(adapterPosition)
@@ -201,6 +199,9 @@ class adapter_AllFiles(
 
                             return@setOnClickListener
                         }
+                    } else {
+                        if (!type)
+                            listenermainupdate.main_onItemselected(adapterPosition)
                     }
 
                     val mPosition = adapterPosition
@@ -239,7 +240,7 @@ class adapter_AllFiles(
                     MainActivity.positionofadapter.add(adapterPosition)
                     mBinding.popupImgBtn.visibility = View.GONE
                     mBinding.checkBoxSelect.visibility = View.VISIBLE
-                }else{
+                } else {
                     mBinding.checkBoxSelect.isChecked = false
                     MainActivity.selectedFileList.clear()
                     MainActivity.positionofadapter.clear()
@@ -299,8 +300,7 @@ class adapter_AllFiles(
                 }
             } catch (_: Exception) {
             }
-            if(!type)
-            {
+            if (!type) {
                 mBinding.popupImgBtn.visibility = View.GONE
             }
         }

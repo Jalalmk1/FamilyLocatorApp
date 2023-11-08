@@ -37,6 +37,7 @@ class permission_activity : AppCompatActivity() {
         window.statusBarColor = Color.WHITE
         setContentView(binding.root)
         AllowButton()
+
       /*  AdManager.showNativeAd(
             this@permission_activity,
             bindingframenativead,
@@ -102,14 +103,18 @@ class permission_activity : AppCompatActivity() {
 
     private var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                if (Environment.isExternalStorageManager()) {
-//                    premiumActivity.isfrom_Splash =true
-//                    val intent = Intent(this@permission_activity, premiumActivity::class.java)
+
+                val sharedPreferences = getSharedPreferences(Constants.pref_name, MODE_PRIVATE)
+                val firstLogin = sharedPreferences!!.getBoolean(Constants.first_login, true)
+
+                if(firstLogin){
                     val intent = Intent(this@permission_activity, language_Activity::class.java)
                     startActivity(intent)
-                } else {
-                    showPermissionDialog()
+                }else{
+                    val intent = Intent(this@permission_activity, MainActivity::class.java)
+                    startActivity(intent)
                 }
+
             }
         }
 
@@ -121,8 +126,13 @@ class permission_activity : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
+    @RequiresApi(Build.VERSION_CODES.R)
     private fun showPermissionDialog() {
-        DialogUtils.permissionDialog(
+
+
+        requestExternalStorageManager()
+
+     /*   DialogUtils.permissionDialog(
             this,
             object : OnDialogPermissionClickListener {
                 override fun onDiscardClick() {
@@ -134,7 +144,7 @@ class permission_activity : AppCompatActivity() {
                 override fun onProceedClick() {
                     requestExternalStorageManager()
                 }
-            })
+            })*/
     }
 
 
