@@ -250,38 +250,6 @@ class adapter_AllFiles(
                     mCurrentItem.isChecked = false
                 }
 
-                /*
-                                if (isCheckbox) {
-                                    if (!isfromlongclick) {
-                                        mBinding.checkBoxSelect.isChecked =
-                                            isselectall != null && isselectall.equals("yes")
-                                        MainActivity.positionofadapter.add(adapterPosition)
-                                    }
-                                    mBinding.popupImgBtn.visibility = View.GONE
-                                    mBinding.checkBoxSelect.visibility = View.VISIBLE
-                                }
-                                else {
-                                    mBinding.checkBoxSelect.isChecked = false
-                                    MainActivity.selectedFileList.clear()
-                                    MainActivity.positionofadapter.clear()
-                                    mBinding.popupImgBtn.visibility = View.VISIBLE
-                                    mBinding.checkBoxSelect.visibility = View.GONE
-                                }
-                */
-//                coroutineJob?.cancel()
-//                val cacheKey = "${PdfRequestHandler.SCHEME_PDF}:${mCurrentItem.pdfFilePath}"
-//                val cachedThumbnail = thumbnailCache.get(cacheKey)
-
-//                if (cachedThumbnail != null) {
-//                    mBinding.fileImage.setImageBitmap(cachedThumbnail)
-//                    Log.d("THUMBNAILSTUFF", "if load")
-//                } else {
-
-
-//                mBinding.fileImage.setImageBitmap(bitmap)
-//                mBinding.fileImage.setImageBitmap(HomeFragment.generateThumbnail(File(mCurrentItem.pdfFilePath))!!)
-
-
                 coroutineJob = CoroutineScope(Dispatchers.Main).launch {
                     withContext(Dispatchers.IO) {
                         val bitmap = try {
@@ -292,10 +260,6 @@ class adapter_AllFiles(
                         bitmap
                     }?.let { bitmap ->
                         mBinding.fileImage.setImageBitmap(bitmap)
-//                            Log.d("THUMBNAILSTUFF", "else load")
-//                            thumbnailCache.put(cacheKey, bitmap)
-                    } ?: run {
-
                     }
                 }
             } catch (_: Exception) {

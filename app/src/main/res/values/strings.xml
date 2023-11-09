@@ -170,5 +170,6 @@ vHnmg9BEYm30QauszNESDdAxnvMvK5aKCv1zRZbvkSTFPP8zNFsQAkKRKE2REMWQToYirywOCq/n
     <string name="clearhistorytext">Are you sure you want to clear history?</string>
     <string name="no_files_listed">No files listed</string>
     <string name="permission_required_to_access_all_files">Permission required to access all files</string>
+    <string name="horizontal_view">Horizontal  View</string>
 
 </resources>

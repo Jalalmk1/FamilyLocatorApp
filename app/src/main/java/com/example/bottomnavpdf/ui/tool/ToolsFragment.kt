@@ -71,6 +71,8 @@ class ToolsFragment(mainActivity: MainActivity) : Fragment() {
                 val sUri = result.data!!.data
                 viewerPdf.uriBybrowse = sUri
                 val intent = Intent(requireContext(), viewerPdf::class.java)
+
+
                 startActivity(intent)
             } catch (_: Exception) {
             }

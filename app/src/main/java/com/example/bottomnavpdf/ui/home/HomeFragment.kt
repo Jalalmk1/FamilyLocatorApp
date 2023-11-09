@@ -790,7 +790,9 @@ class HomeFragment() : Fragment() {
     }
 
     private fun initViewModel() {
-        loaderViewModel = ViewModelProvider(this).get(LoaderViewModel::class.java)
+
+        loaderViewModel = ViewModelProvider(this)[LoaderViewModel::class.java]
+
     }
 
     private fun createLoaderRecyclerView() {
@@ -904,7 +906,9 @@ class HomeFragment() : Fragment() {
                 val file = File(openlist.pdfFilePath)
                 if (file.exists() && file.isFile) {
                     val intent = Intent(context, viewerPdf::class.java)
-                        .putExtra("key", file.absolutePath)
+                    intent.putExtra("key", file.absolutePath)
+                    intent.putExtra("date", openlist.dateCreatedName)
+                    intent.putExtra("name", openlist.fileName)
                     startActivity(intent)
                 } else {
                     originalFileList.removeAt(position)
